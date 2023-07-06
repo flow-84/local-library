@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+  // Buchtitel
+  h1 Buch: #{book.title}
+
+  // Autor
+  p Autor: #{book.author.name}
+
+  // Genre
+  p Genre: #{book.genre.name}
+
+  // Zusammenfassung
+  p Zusammenfassung: #{book.summary}
+
+  // Verfügbarkeit der Buchinstanzen
+  if book.bookinstances.length > 0
+    h4 Verfügbarkeit der Buchinstanzen
+    ul
+      each bookinstance in book.bookinstances
+        li= bookinstance.status
+  else
+    p Es sind keine Buchinstanzen verfügbar.
+
+  // Weitere Informationen zum Buch
+  a(href=book.url) Weitere Informationen zum Buch
