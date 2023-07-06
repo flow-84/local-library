@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  // Autorenname
+  h1 Autor: #{author.name}
+
+  // Bücher des Autors
+  if books.length > 0
+    h4 Bücher des Autors
+    ul
+      each book in books
+        li= book.title
+  else
+    p Der Autor hat keine Bücher veröffentlicht.
