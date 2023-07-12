@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 mongoose.set("strictQuery", false);
 
 // Definieren der Datenbank-URL, zu der eine Verbindung hergestellt werden soll.
-const mongoDB = "mongodb+srv://flow:Mittra84@tut.jbmtwrs.mongodb.net/tut?retryWrites=true&w=majority";
+const mongoDB = "mongodb+srv://@tut.jbmtwrs.mongodb.net/tut?retryWrites=true&w=majority";
 
 // Auf Verbindung zur Datenbank warten und bei Problemen einen Fehler protokollieren
 async function main() {
